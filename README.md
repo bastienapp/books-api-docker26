@@ -17,7 +17,7 @@ docker run -d \
   -e POSTGRES_USER=books \
   -e POSTGRES_PASSWORD=bookspass \
   -e POSTGRES_DB=booksdb \
-  -p 127.0.0.1:54320:5432 \
+  -p 54320:5432 \
   -v books-data:/var/lib/postgresql \
   postgres:18
 ```
