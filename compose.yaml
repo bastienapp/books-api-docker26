@@ -1,6 +1,13 @@
 services:
-  web:
-    build: .
+  frontend:
+    build: frontend
+    ports:
+      - "5000:80"
+    depends_on:
+      - backend
+
+  backend:
+    build: backend
     ports:
       - "8000:3000"
     environment:
@@ -13,7 +20,7 @@ services:
     image: postgres:18
     restart: always
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/01-init.sql
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/01-init.sql
       - books-data:/var/lib/postgresql
 
     environment:

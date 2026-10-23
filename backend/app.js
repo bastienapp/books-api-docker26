@@ -14,6 +14,7 @@ const db = new Pool({
 
 // List all books.
 app.get('/books', async (req, res) => {
+  console.info(req);
   try {
     const result = await db.query('SELECT id, title, author FROM books ORDER BY id');
     res.json(result.rows);
