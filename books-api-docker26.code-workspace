@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "root",
+			"path": "."
+		},
+		{
+			"path": "backend"
+		},
+		{
+			"path": "frontend"
+		}
+	],
+  "settings": {
+    "files.exclude": {
+      "backend": true,
+      "frontend": true,
+    },
+    "java.configuration.updateBuildConfiguration": "interactive",
+  },
+}
